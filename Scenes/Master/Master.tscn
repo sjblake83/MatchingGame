@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://diol8s1oq3hhe"]
+
+[ext_resource type="Script" uid="uid://dm7y2xts7pri5" path="res://Scenes/Master/Master.gd" id="1_1t0lv"]
+[ext_resource type="Texture2D" uid="uid://dyihagypd8y60" path="res://Assets/images/backgroundEmpty.png" id="1_h6g34"]
+[ext_resource type="PackedScene" uid="uid://e2v6n0ywrwon" path="res://Scenes/Main/Main.tscn" id="2_o4rt4"]
+[ext_resource type="PackedScene" uid="uid://c6hrsvoes8vwh" path="res://Scenes/Game/Game.tscn" id="3_7tgqy"]
+
+[node name="Master" type="Control" unique_id=56272501]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1t0lv")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1161859346]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_h6g34")
+expand_mode = 1
+
+[node name="Main" parent="." unique_id=1461013501 instance=ExtResource("2_o4rt4")]
+layout_mode = 1
+
+[node name="Game" parent="." unique_id=720754765 instance=ExtResource("3_7tgqy")]
+visible = false
+layout_mode = 1

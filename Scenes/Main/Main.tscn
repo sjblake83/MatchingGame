@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://e2v6n0ywrwon"]
+
+[ext_resource type="LabelSettings" uid="uid://18qm4ookqt6d" path="res://Resources/TitleLabel.tres" id="1_w20t6"]
+[ext_resource type="PackedScene" uid="uid://dvm0ryyqxrj81" path="res://Scenes/LevelButton/LevelButton.tscn" id="2_i3fi7"]
+[ext_resource type="Script" uid="uid://275bhu5j61nm" path="res://Classes/LevelSetting.gd" id="3_aw1lf"]
+[ext_resource type="PackedScene" uid="uid://c6h52nsxumi80" path="res://Scenes/FrontSprite/FrontSprite.tscn" id="3_o8wgc"]
+[ext_resource type="Texture2D" uid="uid://c0e6miftq3jog" path="res://Assets/glitch/banana.png" id="4_w20t6"]
+[ext_resource type="Texture2D" uid="uid://dv67fea8mcajr" path="res://Assets/glitch/zucchini.png" id="5_aw1lf"]
+[ext_resource type="Texture2D" uid="uid://ivqdqye1gtvs" path="res://Assets/glitch/quest_req_icon_letterblock.png" id="6_5s61s"]
+
+[sub_resource type="Resource" id="Resource_w20t6"]
+script = ExtResource("3_aw1lf")
+rows = 3
+cols = 4
+metadata/_custom_type_script = "uid://275bhu5j61nm"
+
+[sub_resource type="Resource" id="Resource_aw1lf"]
+script = ExtResource("3_aw1lf")
+rows = 4
+cols = 4
+metadata/_custom_type_script = "uid://275bhu5j61nm"
+
+[sub_resource type="Resource" id="Resource_5s61s"]
+script = ExtResource("3_aw1lf")
+rows = 4
+cols = 6
+metadata/_custom_type_script = "uid://275bhu5j61nm"
+
+[sub_resource type="Resource" id="Resource_7npjy"]
+script = ExtResource("3_aw1lf")
+rows = 5
+cols = 6
+metadata/_custom_type_script = "uid://275bhu5j61nm"
+
+[sub_resource type="Resource" id="Resource_4vhfm"]
+script = ExtResource("3_aw1lf")
+rows = 6
+cols = 7
+metadata/_custom_type_script = "uid://275bhu5j61nm"
+
+[node name="Main" type="Control" unique_id=1461013501]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=486117188]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6509804, 1, 1, 0.3372549)
+
+[node name="VB" type="VBoxContainer" parent="." unique_id=239340545]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 108
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="VB" unique_id=956806160]
+layout_mode = 2
+text = "MEMORY MADNESS"
+label_settings = ExtResource("1_w20t6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBLevelButtons" type="HBoxContainer" parent="VB" unique_id=880193154]
+layout_mode = 2
+alignment = 1
+
+[node name="LevelButton" parent="VB/HBLevelButtons" unique_id=234637871 instance=ExtResource("2_i3fi7")]
+layout_mode = 2
+
+[node name="LevelButton2" parent="VB/HBLevelButtons" unique_id=1669646178 instance=ExtResource("2_i3fi7")]
+layout_mode = 2
+level_setting = SubResource("Resource_w20t6")
+
+[node name="LevelButton3" parent="VB/HBLevelButtons" unique_id=1394026671 instance=ExtResource("2_i3fi7")]
+layout_mode = 2
+level_setting = SubResource("Resource_aw1lf")
+
+[node name="LevelButton4" parent="VB/HBLevelButtons" unique_id=1521810946 instance=ExtResource("2_i3fi7")]
+layout_mode = 2
+level_setting = SubResource("Resource_5s61s")
+
+[node name="LevelButton5" parent="VB/HBLevelButtons" unique_id=943471976 instance=ExtResource("2_i3fi7")]
+layout_mode = 2
+level_setting = SubResource("Resource_7npjy")
+
+[node name="LevelButton6" parent="VB/HBLevelButtons" unique_id=1030700356 instance=ExtResource("2_i3fi7")]
+layout_mode = 2
+level_setting = SubResource("Resource_4vhfm")
+
+[node name="HBSprites" type="HBoxContainer" parent="VB" unique_id=707230401]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="FrontSprite" parent="VB/HBSprites" unique_id=338891931 instance=ExtResource("3_o8wgc")]
+layout_mode = 2
+
+[node name="FrontSprite2" parent="VB/HBSprites" unique_id=1957967184 instance=ExtResource("3_o8wgc")]
+layout_mode = 2
+texture = ExtResource("4_w20t6")
+
+[node name="FrontSprite3" parent="VB/HBSprites" unique_id=1489313587 instance=ExtResource("3_o8wgc")]
+layout_mode = 2
+texture = ExtResource("5_aw1lf")
+
+[node name="FrontSprite4" parent="VB/HBSprites" unique_id=2033952968 instance=ExtResource("3_o8wgc")]
+layout_mode = 2
+texture = ExtResource("6_5s61s")
