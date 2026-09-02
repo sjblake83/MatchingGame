@@ -12,4 +12,4 @@ func emit_on_game_exit_pressed() -> void:
 	on_game_exit_pressed.emit()
 
 func emit_on_tile_selected(tile: MemoryTile) -> void:
-	on_tile_selected.emit()
+	on_tile_selected.emit(tile)
