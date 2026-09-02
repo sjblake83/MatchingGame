@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ck1aej1g52qbq"]
+
+[ext_resource type="Script" uid="uid://bnecx4p5gyxmn" path="res://Scenes/SoundController/SoundController.gd" id="1_i6akb"]
+[ext_resource type="AudioStream" uid="uid://dtn1vwuh7jkg1" path="res://Assets/sounds/bgm_action_3.mp3" id="2_tktkl"]
+[ext_resource type="AudioStream" uid="uid://dh7bjmrtuuf2j" path="res://Assets/sounds/bgm_action_4.mp3" id="3_c34ci"]
+[ext_resource type="AudioStream" uid="uid://dxqusdky55c8h" path="res://Assets/sounds/sfx_sounds_impact1.wav" id="4_aodr5"]
+[ext_resource type="AudioStream" uid="uid://3xuc0mnx821a" path="res://Assets/sounds/sfx_sounds_impact7.wav" id="5_tb68k"]
+[ext_resource type="AudioStream" uid="uid://26oqoxed01ju" path="res://Assets/sounds/sfx_sounds_powerup12.wav" id="6_aodr5"]
+
+[node name="SoundController" type="Node" unique_id=51163585]
+script = ExtResource("1_i6akb")
+main_menu_music = ExtResource("2_tktkl")
+game_music = ExtResource("3_c34ci")
+click_effect = ExtResource("4_aodr5")
+tile_effect = ExtResource("5_tb68k")
+game_over_effect = ExtResource("6_aodr5")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1418050271]
+volume_db = -30.0
+
+[node name="EffectsPlayer" type="AudioStreamPlayer" parent="." unique_id=477782402]
+volume_db = -30.0
+max_polyphony = 10

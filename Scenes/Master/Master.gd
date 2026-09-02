@@ -2,6 +2,7 @@ extends Control
 
 @onready var main: Control = $Main
 @onready var game: Control = $Game
+@onready var sound_controller: Node = $SoundController
 
 
 # Called when the node enters the scene tree for the first time.

@@ -4,6 +4,7 @@ extends Node
 
 static var SelectionEnabled: bool = true
 @onready var reveal_timer: Timer = $RevealTimer
+@onready var pair_sound: AudioStreamPlayer = $PairSound
 
 var _selected_tiles: Array[MemoryTile]
 var _pairs_made: int = 0
@@ -30,12 +31,11 @@ func check_for_pair() -> void:
 		_selected_tiles[1].kill_on_pair()
 		_pairs_made += 1
 		SignalHub.emit_on_pairs_updated(_pairs_made, _target_pairs)
+		pair_sound.play()
 		check_game_over()
 
 func check_game_over() -> void:
-	if _target_pairs != _pairs_made:
-		SelectionEnabled = true
-	else:
+	if _target_pairs == _pairs_made:
 		SignalHub.emit_on_game_over(_moves_made)
 
 func process_pair() -> void:
